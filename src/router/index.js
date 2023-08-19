@@ -1,27 +1,41 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
+import Appointment from '@/views/AppointPage/AppointPage.vue'
 Vue.use(VueRouter)
+import PatientPage from "@/views/PatientPage.vue";
+import NotFound from "@/views/NotFound.vue";
+import Patients from "@/views/Patients.vue";
+import AuthorizationPage from "@/views/AuthorizationPage.vue";
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'main',
+    component: Appointment
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/patients',
+    name: 'patients',
+    component: Patients
+  },
+  {
+    path: '/patient/:id',
+    name: 'patient',
+    component: PatientPage
+  },
+  {
+    path: '/auth',
+    name: 'auth',
+    component: AuthorizationPage
+  },
+  { name: "404", path: "/404", component: NotFound },
+  { path: "*", redirect: "404" }, // Add the NotFound component route
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history',
 })
 
 export default router
