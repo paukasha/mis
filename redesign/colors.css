@@ -1,0 +1,47 @@
+:root {
+  --body-background: linear-gradient(90deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%);
+  --graph-background: #f3d7b8f0;
+  --color-btn-hover: #cbcbcb;
+  --color-modal-dark: rgba(0, 0, 0, 0.8);
+  /*  ui */
+  /* grey */
+  --color-cod-gray: #1c1c1c;
+  --color-scorpion: #585757;
+  --color-dusty-gray: #969696;
+  --color-mercury: #e8e8e8;
+  --color-alabaster: #f7f7f7;
+  --color-white: #fff;
+  --color-silver-chalice: #a9a9a9;
+
+
+  /* blue */
+  --color-azure-radiance: #0085ff;
+  --color-dodger-blue: #339dff;
+  --color-denim: #1272cc;
+  --color-onahau: #cce7ff;
+  --color-solitude: #e5f3ff;
+
+  /* red */
+  --color-alizarin-crimson: #e92c2c;
+  --color-fair-pink: #ffecec;
+
+  /* green */
+  --color-jade: #00ba34;
+  --color-tara: #e5f8eb;
+  --color-emirald: #33c85d;
+  --fun-green: #00952a;
+  --color-granny-apple: #ccf1d6;
+
+  /*  orange */
+  --color-tangerine: #f98600;
+  --color-serenade: #fff5e9;
+
+  /* shadow */
+  --block-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  --side-panel-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  --tab-shadow: 0px 24px 38px rgba(0, 0, 0, 0.04), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 11px 15px rgba(0, 0, 0, 0.1);
+
+  --social-network-data-color: rgb(197, 197, 197);
+
+
+}

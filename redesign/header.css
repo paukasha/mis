@@ -1,0 +1,353 @@
+.header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-mercury);
+  grid-area: header;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns:
+    repeat(2, max-content) minmax(200px, 300px) max-content minmax(200px, 1fr)
+    repeat(4, max-content);
+  align-items: center;
+  column-gap: 20px;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__item-date .date-btn:hover {
+  cursor: initial;
+}
+
+.global__search {
+  position: relative;
+  display: grid;
+  align-items: center;
+}
+
+.global__search .search-component {
+  position: absolute;
+  z-index: 210;
+  width: 100%;
+}
+
+.global__search-result {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  left: 0;
+  padding: 52px 0 0 0;
+  border-top: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  z-index: 100;
+  max-height: 370px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  box-shadow: 0 4px 10px #6a696970;
+}
+
+.global__search-result > div {
+  padding: 0.25rem 0.725rem;
+  transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.global__search-result > div:hover {
+  background-color: var(--color-dodger-blue);
+  color: var(--color-white);
+  transition: color 0.3s linear, background-color 0.3s linear;
+}
+
+.burger {
+  box-shadow: none;
+  border: 1px solid var(--color-mercury);
+  border-radius: 100%;
+}
+
+.burger:hover {
+  box-shadow: var(--block-shadow);
+  border: 1px solid var(--color-mercury);
+  background-color: var(--color-alabaster);
+}
+
+.search__hidden {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -27px;
+  right: 0;
+  background-color: var(--color-white);
+  z-index: 119;
+  border-radius: 8px;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.affiliate {
+  font-weight: 500;
+}
+
+.affiliate__text {
+  margin-right: 13px;
+}
+
+.search-btn {
+  border: none;
+  box-shadow: none;
+}
+
+.search-btn:hover {
+  border: none;
+}
+
+.header .message-quantity {
+  position: absolute;
+  right: -2px;
+  top: -5px;
+}
+
+.date-btn {
+  background-color: var(--color-alabaster);
+}
+
+.date-delimiter {
+  padding: 0 12px;
+  margin: 0 12px;
+  border-left: 1px solid var(--color-mercury);
+  border-right: 1px solid var(--color-mercury);
+}
+
+.date-delimiter span {
+  font-weight: 500;
+}
+
+.calendar-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) min-content;
+}
+
+.calendar-btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.calendar-input {
+  display: inline-block;
+  border: 1px solid var(--color-mercury);
+  font-weight: 400;
+  color: var(--color-cod-gray);
+  padding: 0 12px;
+  max-width: 118px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.calendar-block span:first-child .calendar-input {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.calendar-input::placeholder {
+  color: var(--color-cod-gray);
+}
+
+.vc-popover-content-wrapper {
+  z-index: 100 !important;
+}
+
+/* для range календаря */
+
+.calendar__range .vc-pane.row-from-end-1 {
+  position: relative;
+}
+
+.calendar__range .vc-pane-container > div .column-from-end-2 .vc-header {
+  justify-content: end;
+  padding: 0;
+  padding-bottom: 12px;
+  margin: 10px 12px 12px;
+}
+
+.calendar__range .vc-pane-container > div .column-from-end-1 .vc-header {
+  justify-content: start;
+  padding: 0;
+  padding-bottom: 12px;
+  margin: 10px 12px 12px;
+}
+
+.calendar__range .vc-pane-container > div .vc-header {
+  border-bottom: 1px solid var(--color-mercury);
+}
+
+.calendar__range .vc-arrow .base-btn {
+  min-width: 22px;
+  width: 28px;
+  height: 28px;
+  padding: 0.25rem;
+}
+
+.calendar__range .vc-arrow.is-right .base-btn {
+  transform: rotate(180deg);
+}
+
+.calendar__range .vc-title .base-btn {
+  height: 28px;
+}
+
+.calendar__range .vc-arrow:hover {
+  background: transparent;
+}
+
+.calendar__range .vc-arrow > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6px;
+}
+
+.calendar__range .calendar-title-btns .base-btn {
+  display: flex;
+  align-items: center;
+}
+
+.calendar__range .calendar-title-btns .base-btn span:first-child {
+  margin-left: 8px;
+  transform: rotate(-90deg);
+}
+
+.calendar__footer {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  column-gap: 12px;
+  justify-content: end;
+  border-top: 1px solid var(--color-mercury);
+  padding: 0.725rem;
+}
+
+/* стили для контекстнго меню календаря */
+.calendar-context {
+  position: absolute;
+  z-index: 120;
+  background-color: #2d3748;
+  border-radius: 8px;
+  transform: translate(-50%, 0);
+  transition: background-color 0.3s linear, border-radius 0.3s linear;
+  padding: 0.5rem 0;
+}
+
+.calendar-context::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #2d3748;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -30%) rotate(45deg);
+  z-index: 100;
+}
+
+.calendar-context span {
+  padding: 0.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.calendar-context span:hover {
+  background-color: #1a202c;
+  transition: background-color 0.3s linear, border-radius 0.3s linear;
+}
+
+.calendar-context span {
+  font-size: 10px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.header__account .menu-item {
+  white-space: nowrap;
+}
+
+.header__account .dropdown-list {
+  left: initial;
+  bottom: -80px;
+  right: 0;
+  top: initial;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: grid;
+  align-items: center;
+}
+
+.custom-select .selected {
+  cursor: pointer;
+  user-select: none;
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) min-content;
+  gap: 4px;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  margin: 0 10px;
+}
+
+.custom-select .selected div:first-child {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.arrow {
+  background-image: url('../assets/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-origin: content-box;
+  /*margin-right: -8px;*/
+  width: 10px;
+  height: 10px;
+}
+
+.custom-select .items {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--color-white);
+  top: -1.25rem;
+  left: 0;
+  right: 0;
+  padding-top: 2rem;
+  z-index: 1;
+  line-height: 28px;
+  box-shadow: 0 4px 10px #6a696970;
+}
+
+.custom-select .items div {
+  padding: 0 0.725rem 0 1.25rem;
+  margin: 0.725rem 0;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.custom-select .items div:hover {
+  background-color: var(--color-dodger-blue);
+  color: var(--color-white);
+}
+
+.selectHide {
+  display: none;
+}

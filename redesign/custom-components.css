@@ -1,0 +1,412 @@
+/* header-bottom */
+.header__bottom {
+  position: relative;
+  border-bottom: 1px solid var(--color-mercury);
+  display: grid;
+  grid-template-columns: max-content 1fr repeat(1, max-content) min-content;
+  align-items: center;
+  column-gap: 20px;
+  padding: 1.25rem 1rem;
+}
+
+/* legend */
+.legend {
+  position: relative;
+  justify-content: end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 32px);
+}
+
+.legend__item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-white);
+  border-radius: 100%;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.legend__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+/*  === end legend */
+
+/* med-docs */
+.med-docs {
+  row-gap: vaR(--spacing-xxm);
+}
+
+.med-docs__add {
+  max-width: 660px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 1rem;
+}
+
+.med-docs-table thead tr th:nth-child(2) {
+  width: 300px;
+}
+/* end med-docs */
+
+/* service-material-table */
+.service-materals-table thead th {
+  background-color: var(--color-alabaster);
+}
+
+/* therapy-plan */
+.therapy-plan-modal__checkbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.therapy-plan-modal {
+  padding-top: 3.25rem;
+}
+
+.therapy-plan-modal .apply-btn {
+  justify-self: end;
+  grid-column-start: 2;
+}
+
+.therapy-plan-modal__top {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+}
+/*  === end service-material-table  */
+
+/*  inpatient-therapy-grid */
+.cab-sub-cols {
+  grid-template-rows: min-content 1fr;
+}
+
+.plan__item {
+  position: relative;
+  background-color: #b6ebd9;
+  outline: 0.5px solid #f1f1f1;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.plan__item .appoint-status-type {
+  background-color: #a98d8d;
+  width: 97px;
+  height: 11px;
+  position: absolute;
+  right: -55px;
+}
+
+/* inpatient-therapy-item-modal */
+.therapy-item-modal-data {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 3rem 1.25rem;
+  align-items: start;
+}
+
+.therapy-item-data {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.btns-block {
+  padding-top: 1.25rem;
+}
+
+.executed-plan {
+  opacity: 0.4;
+}
+/*  === end inpatient-therapy-item-modal */
+
+/*  burger-menu */
+.burger-menu {
+  position: absolute;
+  top: 82px;
+}
+
+.fixed-burger {
+  position: fixed;
+  background-color: var(--color-white);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  width: 320px;
+  padding: 12px;
+  box-shadow: var(--side-panel-shadow);
+  z-index: 60;
+  height: 100vh;
+}
+
+.fixed-burger::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@keyframes open-close-side-menu {
+  0% {
+    left: -320px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.slide-fade-enter-active {
+  animation: open-close-side-menu 0.3s linear;
+}
+
+.slide-fade-leave-active {
+  animation: open-close-side-menu 0.3s linear reverse;
+}
+
+/* accordion */
+.accord {
+  display: grid;
+  row-gap: 24px;
+}
+
+.accord__item {
+  display: grid;
+  row-gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.accord__main {
+  grid-column: 1/3;
+  display: grid;
+  row-gap: 24px;
+  grid-template-columns: min-content repeat(2, 1fr);
+  align-items: center;
+  cursor: pointer;
+}
+
+.accord__main--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.accord__main:hover > .accord__title {
+  transition: color 0.3s linear;
+  color: var(--color-azure-radiance);
+}
+
+.accord__main:hover > .accord-arrow svg {
+  transition: fill 0.3s linear, stroke 0.3s linear;
+  fill: var(--color-azure-radiance);
+  stroke: var(--color-azure-radiance);
+}
+
+.accord__main:hover > .accord__item-icon svg {
+  transition: stroke 0.3s linear;
+  stroke: var(--color-azure-radiance);
+}
+
+.accord__item-icon {
+  padding-right: 17px;
+}
+
+.accord__item-icon svg {
+  stroke: var(--color-cod-gray);
+  transition: stroke 0.3s linear;
+}
+
+.accord__title {
+  display: inline-block;
+  align-self: end;
+  transition: color 0.3s linear;
+  font-weight: 500;
+  text-align: initial;
+}
+
+.accord__content {
+  display: grid;
+  grid-column: 1/3;
+  padding-left: 35px;
+  font-weight: 400;
+  row-gap: 24px;
+  transition: color 0.2s ease-out;
+}
+
+.accord__content > div:hover {
+  color: var(--color-azure-radiance);
+  transition: color 0.3s linear;
+}
+
+.accord__content:hover {
+  cursor: pointer;
+}
+
+.accord-arrow {
+  grid-column-start: 3;
+  justify-self: end;
+}
+
+.accord-arrow svg {
+  fill: #585757;
+  stroke: #585757;
+  transition: fill 0.3s linear, stroke 0.3s linear;
+}
+
+/* стремная иконка на ней не работает нормально ховер поэтому добавляю следующие два стиля*/
+svg.bad-icon-tasks {
+  stroke: none;
+}
+
+.accord__main:hover > .accord__item-icon > svg.bad-icon-tasks {
+  stroke: none;
+  fill: var(--color-azure-radiance);
+}
+/*  === end burger-menu */
+
+/*  work with lead */
+.work-with-lead-filters-form {
+  max-width: 50%;
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.work-leads-info {
+  padding-top: 1rem;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.wl-comments {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(2, 50%); */
+  max-height: 500px;
+  overflow-y: auto;
+  gap: 1rem;
+}
+
+.wl-comments__comment {
+  padding: 0.75rem;
+  background-color: var(--color-tara);
+  display: grid;
+  row-gap: 0.5rem;
+  max-width: 50%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--custom-shadow);
+}
+
+.wl-comments__comment small {
+  text-align: right;
+}
+
+/*  === work with lead  */
+
+/*  aedit-appoint modal */
+.appoint__edit-form {
+  row-gap: var(--spacing-xxm);
+}
+.appoint__edit-form .btns-wrapper__right {
+  justify-self: initial;
+  grid-template-columns: 1fr repeat(2, max-content);
+}
+
+/* actual-directions */
+.actual-directions {
+  border: var(--border);
+  border-radius: var(--border-radius-8);
+  background-color: var(--color-white);
+  margin-top: var(--spacing-xxm);
+}
+
+.actual-directions-grid {
+  grid-template-columns: 1fr repeat(2, minmax(10px, 112px));
+  align-items: center;
+  column-gap: var(--spacing-m);
+  width: 100%;
+}
+
+.checkbox-helper-grid {
+  border-bottom: var(--border);
+}
+
+.checkbox-helper-grid label.checkbox {
+  display: grid;
+  /* grid-template-columns: max-content 1fr; */
+  padding: var(--spacing-s);
+}
+
+.actual-directions__bottom {
+  grid-template-columns: 1fr 1fr;
+  border-top: var(--border);
+  padding: var(--spacing-s);
+}
+
+.actual-directions__quantity {
+  justify-self: end;
+  font-size: var(--h4);
+  font-weight: 600;
+}
+
+/* end actual directions */
+
+/* payment-block */
+.payment-block-header {
+  grid-template-columns: repeat(2, max-content) 1fr;
+  gap: var(--spacing-xxm);
+  align-items: center;
+}
+
+.payment-block__input {
+  row-gap: var(--spacing-xs);
+}
+
+.payment__total-sum {
+  grid-template-columns: repeat(3, 148px) 234px;
+  gap: var(--spacing-xxm);
+}
+
+.payment__checks {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: var(--spacing-xm);
+}
+
+.payment__type {
+  grid-column: span 2;
+  row-gap: var(--spacing-s);
+}
+
+.payment__sum {
+  row-gap: var(--spacing-s);
+}
+
+/*  ====== end payment block */
+
+/* comprehensive-program */
+.comprehensive-program {
+  grid-template-columns: max-content minmax(300px, 692px);
+  gap: var(--spacing-xm);
+  align-items: center;
+}
+
+
+/*auth*/
+.auth__form {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0);
+  border: 1px solid var(--color-cod-gray);
+  border-radius: var(--border-radius-6);
+  padding: var(--spacing-xxm);
+}
