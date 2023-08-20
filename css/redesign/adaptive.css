@@ -37,7 +37,7 @@
     }
 
     .header-container {
-        grid-template-columns: 40px minmax(82px, 1fr) repeat(4, 40px);
+        grid-template-columns: 40px minmax(60px, 1fr) repeat(4, 40px);
     }
 
 
@@ -68,5 +68,27 @@
     .header__bottom-calendar {
         grid-column-start: 1;
         grid-row-start: 2
+    }
+}
+
+
+@media(max-width: 500px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        gap: initial;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .btns-wrapper__right {
+        grid-column: span 2;
+        gap: 10px;
+    }
+
+    .form__content-spec-time {
+        grid-template-columns: 70px min-content 70px 60px;
     }
 }

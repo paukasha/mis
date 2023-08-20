@@ -1,6 +1,6 @@
 .slide-panel {
   grid-area: ms;
-  position: relative;
+  /*position: relative;*/
   display: grid;
   /*border-left: 1px solid var(--color-mercury);*/
   grid-template-columns: 1fr 1fr;
@@ -389,13 +389,14 @@
 }
 
 .panel-container {
-  position: relative;
+  /*position: relative;*/
 }
 
 .panel__wrapper {
   position: absolute;
   right: 0;
-  width: 620px;
+  max-width: 620px;
+  width: 100%;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: var(--color-mercury);
