@@ -10,9 +10,9 @@
         </div>
 
         <div class='header__item logo'>
-          <a href='/'>
+          <router-link to='/'>
             <img src='../../assets/icons/logo.svg'>
-          </a>
+          </router-link>
 
         </div>
 

@@ -30,12 +30,13 @@ export const TableMixin = {
       }, 0);
     },
     calcTableCols() {
+      let isMobile = window.screen.width < 500
       let colsWidths = this.theads
         .map((el) => el.width)
         .filter((el) => el)
         .join(' ');
       return {
-        gridTemplateColumns: `1fr ${colsWidths}`,
+        gridTemplateColumns: !isMobile ? `1fr ${colsWidths}` : '100px 1fr 72px 72px',
       };
     },
     theadColor() {
