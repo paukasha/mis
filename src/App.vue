@@ -68,10 +68,7 @@ export default {
 
   },
   mounted() {
-    // this.$nextTick(() => {
-    //   this.key++
-    // })
-    localStorage.clear();
+    localStorage.removeItem('updateKey');
     let updateKey = JSON.parse(localStorage.getItem('updateKey'))
     if (updateKey === null) {
       localStorage.setItem('updateKey', '0')

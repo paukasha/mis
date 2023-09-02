@@ -13,25 +13,25 @@ export const searchPatient = {
           surname: 'Иванов',
           patronymic: 'Иванович',
           phone_number: '78787',
-          birthday: '2000-12-04'
+          birthday: '04.10.2000'
         },
         {
           gender: 'M',
-          full_name_ab_bd: 'Сидоров А. Ф',
+          full_name_ab_bd: 'Петров А. Ф',
           first_name: 'Антон',
-          surname: 'Сидоров',
+          surname: 'Петров',
           patronymic: 'Федорович',
           phone_number: '9995555',
-          birthday: '1995-07-05'
+          birthday: '05.07.1995'
         },
         {
           gender: 'Ж',
-          full_name_ab_bd: 'Соловьева И. П.',
-          first_name: 'Ирина',
-          surname: 'Соловьева',
-          patronymic: 'Павловна',
+          full_name_ab_bd: 'Сидоров И. П.',
+          first_name: 'Андрей',
+          surname: 'Сидоров',
+          patronymic: 'Павлович',
           phone_number: '987456',
-          birthday: '1990-08-21'
+          birthday: '21.12.1990'
         }
       ]
     }

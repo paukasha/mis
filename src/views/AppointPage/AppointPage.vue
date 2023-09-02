@@ -15,6 +15,8 @@
          id='appointVueApp'
          ref='appointVueApp'>
 
+      <span style="display: inline-block; padding: 10px; border: 1px solid red">{{ $t('searchPatientWarning')}}</span>
+
       <base-spinner v-if='isGetDataLoading'></base-spinner>
       <div v-else>
         <appoint-grid v-for='grid in newGridList'

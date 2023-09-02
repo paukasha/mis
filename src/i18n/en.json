@@ -9,6 +9,7 @@
     "Задачи": "Tasks"
   },
   "searchPatient": "Patient search",
+  "searchPatientWarning": "For search patient use surname  Иванов/Петров/Сидоров",
   "Расчет стоимости": "Cost calculation",
   "Группа": "Group",
   "Выберите группу": "Select group",

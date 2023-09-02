@@ -1,8 +1,6 @@
 .slide-panel {
   grid-area: ms;
-  /*position: relative;*/
   display: grid;
-  /*border-left: 1px solid var(--color-mercury);*/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px;
   background-color: var(--color-white);
@@ -694,7 +692,7 @@
 }
 
 .date-input {
-  background-image: url('../assets/icons/calendar.svg');
+  /*background-image: url('../assets/icons/calendar.svg');*/
   background-repeat: no-repeat;
   background-position: center right;
   background-origin: content-box;
