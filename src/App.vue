@@ -1,33 +1,33 @@
 <template>
   <div id="app"
-       :key="locale"
+       :key="key"
   >
-      <v-app  >
-        <div v-if="!auth">
-          <router-view ></router-view>
-        </div>
+    <v-app>
+      <div v-if="!auth">
+        <router-view></router-view>
+      </div>
 
-        <div class='mis-container' v-else>
-          <top-header></top-header>
+      <div class='mis-container' v-else>
+        <top-header></top-header>
 
-          <transition name="slide-fade">
-            <burger-menu v-if='isBurgerMenuOpened'></burger-menu>
-          </transition>
+        <transition name="slide-fade">
+          <burger-menu v-if='isBurgerMenuOpened'></burger-menu>
+        </transition>
 
-          <router-view ></router-view>
+        <router-view></router-view>
 
-          <slide-panel></slide-panel>
+        <slide-panel></slide-panel>
 
-          <grid-ctx-menu
-              v-if='ctxMenu.isVisible'
-              :ctx-menu='ctxMenu'
-              @open-modal='openModal($event)'
-          >
-          </grid-ctx-menu>
+        <grid-ctx-menu
+            v-if='ctxMenu.isVisible'
+            :ctx-menu='ctxMenu'
+            @open-modal='openModal($event)'
+        >
+        </grid-ctx-menu>
 
-          <scroll-top-btn></scroll-top-btn>
-        </div>
-      </v-app>
+        <scroll-top-btn></scroll-top-btn>
+      </div>
+    </v-app>
 
   </div>
 </template>
@@ -46,7 +46,6 @@ import moment from 'moment';
 import {momentLocale} from "@/mixins/momentLocale.js";
 
 
-
 export default {
   mixins: [momentLocale],
   components: {
@@ -61,7 +60,7 @@ export default {
       baseFilters,
       currentModalForEsc: '',
       selectedLanguage: '',
-
+      key: 0
     };
   },
   created() {
@@ -69,6 +68,21 @@ export default {
 
   },
   mounted() {
+    // this.$nextTick(() => {
+    //   this.key++
+    // })
+    localStorage.clear();
+    let updateKey = JSON.parse(localStorage.getItem('updateKey'))
+    if (updateKey === null) {
+      localStorage.setItem('updateKey', '0')
+    } else {
+      updateKey = localStorage.getItem('updateKey')
+      updateKey = JSON.parse(updateKey)
+      let asd = +updateKey + 1
+      localStorage.setItem('updateKey', JSON.stringify(asd))
+    }
+
+
     document.addEventListener('keyup', (e) => {
       this.escListener(e);
     });
@@ -84,11 +98,11 @@ export default {
     this.$store.commit('updatePayload', {option: 'locale', payload: locale})
     moment.locale(locale)
     this.$moment.locale(locale);
-    Vue.prototype.moment.locale( locale)
+    Vue.prototype.moment.locale(locale)
 
     this.selectedLanguage = locale
 
-   this.$store.commit('updateTheme')
+    this.$store.commit('updateTheme')
   },
   beforeDestroy() {
     document.removeEventListener('keyup', (e) => {
