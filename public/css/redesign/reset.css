@@ -561,6 +561,7 @@ h3 {
 }
 
 .vs__dropdown-menu {
+  background: var(--body-background) !important;
   top: initial;
 }
 
@@ -617,8 +618,6 @@ h3 {
 .custom-dark-theme .form__textarea:read-only {
   background: #86868687;
 }
-
-
 
 .form__title {
   padding-bottom: 16px;
@@ -683,7 +682,7 @@ h3 {
 
 .textarea-base:not(:read-only)::-webkit-resizer,
 .textarea-reset-base:not(:read-only):focus {
-  background-image: url('../assets/icons/resize-arrow.svg') !important;
+  /* background-image: url('../assets/icons/resize-arrow.svg') !important; */
   background-repeat: no-repeat;
 }
 
@@ -775,7 +774,6 @@ h3 {
   border-bottom: 1px dashed var(--color-dusty-gray);
   cursor: pointer;
 }
-
 
 .header__bottom-calendar {
   grid-column-start: 4;
