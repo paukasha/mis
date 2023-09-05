@@ -33,6 +33,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   overflow: hidden;
+  isolation: isolate;
   min-height: 100vh;
   height: 100vh;
 }
@@ -280,6 +281,7 @@ h3 {
   width: 100%;
   cursor: pointer;
   overflow: hidden;
+  isolation: isolate;
   position: absolute;
   -ms-grid-column: 2;
   grid-column-start: 2;
@@ -586,11 +588,13 @@ h3 {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .text-overflow-variant {
   white-space: nowrap;
   overflow: hidden;
+  isolation: isolate;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
@@ -608,6 +612,7 @@ h3 {
 .vs__selected-options:not[multiple] {
   height: 34px;
   overflow: hidden;
+  isolation: isolate;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   -webkit-box-align: baseline;
@@ -630,6 +635,7 @@ h3 {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
+  isolation: isolate;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -693,6 +699,7 @@ h3 {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* form */
@@ -869,6 +876,7 @@ h3 {
   background: #7c7c7c;
   border-radius: 50%;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .scroll-top {

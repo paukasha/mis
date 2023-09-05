@@ -302,6 +302,7 @@
 
 .custom-select .selected div:first-child {
   overflow: hidden;
+  isolation: isolate;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -320,6 +321,7 @@
 .custom-select .items {
   border-radius: 0.5rem;
   overflow: hidden;
+  isolation: isolate;
   position: absolute;
   background-color: var(--color-white);
   top: -1.25rem;
@@ -338,6 +340,7 @@
   user-select: none;
   font-weight: 400;
   overflow: hidden;
+  isolation: isolate;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;

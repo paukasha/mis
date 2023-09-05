@@ -26,6 +26,7 @@
   border-radius: var(--border-radius-8);
   padding: 0;
   overflow: hidden;
+  isolation: isolate;
   align-items: center;
   column-gap: 0;
 }
@@ -195,6 +196,7 @@
 .new-grid.grid {
   border-radius: 0.25rem;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .new-grid-outline {

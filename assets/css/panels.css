@@ -480,6 +480,7 @@
   font-size: 13px;
   max-height: 320px;
   overflow: hidden;
+  isolation: isolate;
   grid-template-rows: min-content minmax(1fr, 200px) min-content;
   background-color: var(--color-white);
 }

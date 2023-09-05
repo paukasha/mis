@@ -17,6 +17,7 @@
 
 .modal-container.mc-temp-wrapper {
   overflow: hidden;
+  isolation: isolate;
 }
 
 .total-modal {
@@ -185,6 +186,7 @@
   max-width: 100%;
   max-height: 100vh;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* модалка центра сообщений*/
@@ -203,6 +205,7 @@
 .mc-temp-wrapper {
   /* width: 400px; */
   overflow: hidden;
+  isolation: isolate;
   display: grid;
   grid-template-rows: min-content minmax(200px, 1fr);
   height: 100%;

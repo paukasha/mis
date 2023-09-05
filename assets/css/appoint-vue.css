@@ -133,7 +133,7 @@
 
 .columns {
   border-right: 1px solid var(--color-mercury);
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /*-webkit-mask-image: -webkit-radial-gradient(white, black);*/
 }
 
 .content__row {
@@ -164,6 +164,7 @@
   box-shadow: var(--block-shadow);
   border-radius: 4px;
   overflow: hidden;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 7px 1fr;
   column-gap: 8px;
