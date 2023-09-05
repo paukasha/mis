@@ -132,7 +132,8 @@
 }
 
 .columns {
-  border-right: 1px solid var(--color-mercury)
+  border-right: 1px solid var(--color-mercury);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .content__row {
