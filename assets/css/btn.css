@@ -21,12 +21,6 @@
   justify-self: end; grid-column-start: 3;
 }
 
-/* .base-btn span {
-  font-size: 16px;
-  font-weight: 500;
-} */
-
-/* :not(.burger):not(.apply-btn) */
 .base-btn svg {
   margin-top: 4px;
   fill: var(--color-cod-gray);
